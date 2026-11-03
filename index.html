@@ -1,0 +1,1268 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="STUDIO WEB — Siti web e identità digitali per attività locali, ristoranti, hospitality e brand indipendenti.">
+<title>STUDIO WEB — Digital presence, with character.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+--green:#18352b;
+--green2:#274a3b;
+--green3:#365b49;
+--cream:#f4f0e6;
+--paper:#fbf9f3;
+--gold:#c5a46d;
+--ink:#18231d;
+--muted:#777c72;
+--line:rgba(24,53,43,.16);
+--serif:'Playfair Display',Georgia,serif;
+--sans:'DM Sans',sans-serif;
+--display:'Manrope',sans-serif;
+}
+
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
+body {
+margin:0;
+background:var(--cream);
+color:var(--green);
+font-family:var(--sans);
+-webkit-font-smoothing:antialiased;
+}
+a {color:inherit;text-decoration:none}
+img {display:block;width:100%;height:100%;object-fit:cover}
+button {font:inherit}
+.wrap {width:min(1240px,calc(100% - 64px));margin:auto}
+.eyebrow {
+font:600 10px var(--display);
+letter-spacing:.22em;
+text-transform:uppercase;
+}
+.serif {
+font-family:var(--serif);
+font-weight:500;
+letter-spacing:-.04em;
+}
+.topline {
+height:34px;
+background:var(--green);
+color:var(--cream);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:9px;
+letter-spacing:.19em;
+text-transform:uppercase;
+}
+.nav {
+height:86px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+border-bottom:1px solid var(--line);
+position:relative;
+z-index:5;
+}
+.brand {display:flex;align-items:center;gap:12px}
+.monogram {
+width:39px;height:39px;
+border:1px solid var(--gold);
+display:grid;place-items:center;
+font:600 15px var(--display);
+letter-spacing:-.12em;
+color:var(--green);
+}
+.brandname {
+font:800 13px var(--display);
+letter-spacing:.18em;
+}
+.brandname small {
+display:block;
+font:500 8px var(--sans);
+letter-spacing:.22em;
+margin-top:3px;
+color:var(--muted);
+}
+.navlinks {
+display:flex;
+align-items:center;
+gap:32px;
+font-size:11px;
+color:#4c5d51;
+}
+.navlinks a {transition:.2s}
+.navlinks a:hover {color:var(--gold)}
+.nav-cta,.btn {
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:16px;
+padding:15px 21px;
+background:var(--green);
+color:var(--cream);
+font:600 10px var(--display);
+letter-spacing:.12em;
+text-transform:uppercase;
+border:1px solid var(--green);
+transition:.25s;
+}
+.nav-cta:hover,.btn:hover {
+background:var(--gold);
+border-color:var(--gold);
+color:var(--green);
+}
+.menu {
+display:none;
+background:none;
+border:0;
+color:var(--green);
+font-size:24px;
+}
+
+.hero {
+padding:72px 0 82px;
+display:grid;
+grid-template-columns:1fr 1.02fr;
+gap:56px;
+align-items:center;
+}
+.hero-copy {padding:14px 0}
+.hero .eyebrow {
+color:#758174;
+display:flex;
+align-items:center;
+gap:12px;
+}
+.hero .eyebrow:before {
+content:'';
+width:34px;
+height:1px;
+background:var(--gold);
+}
+h1 {
+font:500 clamp(54px,7vw,100px)/.98 var(--serif);
+letter-spacing:-.065em;
+margin:26px 0 24px;
+max-width:640px;
+}
+h1 em {color:#8a9b82;font-weight:500}
+.hero-copy p {
+max-width:430px;
+color:#647168;
+font-size:14px;
+line-height:1.9;
+margin:0 0 32px;
+}
+.hero-actions {
+display:flex;
+align-items:center;
+gap:24px;
+}
+.text-link {
+font-size:11px;
+font-weight:600;
+border-bottom:1px solid var(--gold);
+padding-bottom:5px;
+}
+.hero-note {
+display:flex;
+gap:28px;
+margin-top:65px;
+padding-top:20px;
+border-top:1px solid var(--line);
+color:#748075;
+font-size:9px;
+letter-spacing:.13em;
+text-transform:uppercase;
+}
+.hero-note span:before {
+content:'✳';
+color:var(--gold);
+margin-right:8px;
+}
+.hero-visual {
+height:600px;
+position:relative;
+padding:0 0 35px 35px;
+}
+.hero-image {
+height:100%;
+overflow:hidden;
+position:relative;
+background:#d7d2c5;
+}
+.hero-image img {filter:saturate(.78)}
+.hero-image:after {
+content:'';
+position:absolute;
+inset:0;
+background:linear-gradient(180deg,transparent 45%,rgba(16,39,30,.28));
+}
+.image-caption {
+position:absolute;
+z-index:1;
+bottom:28px;
+left:30px;
+color:#fff;
+}
+.image-caption b {
+display:block;
+font:500 30px var(--serif);
+}
+.image-caption span {
+font-size:9px;
+letter-spacing:.18em;
+text-transform:uppercase;
+}
+.floating-card {
+position:absolute;
+left:0;
+bottom:0;
+background:var(--paper);
+width:190px;
+padding:21px;
+box-shadow:0 14px 45px #18352b1a;
+}
+.floating-card .num {
+font:500 42px var(--serif);
+color:var(--gold);
+}
+.floating-card p {
+font-size:10px;
+line-height:1.6;
+color:#69756a;
+margin:3px 0 0;
+}
+.vertical-label {
+position:absolute;
+right:-27px;
+top:25px;
+writing-mode:vertical-rl;
+letter-spacing:.2em;
+font-size:8px;
+color:#718071;
+text-transform:uppercase;
+}
+
+.marquee {
+background:var(--green);
+color:var(--cream);
+overflow:hidden;
+padding:20px 0;
+white-space:nowrap;
+}
+.marquee-inner {
+display:flex;
+justify-content:space-around;
+gap:45px;
+font:500 11px var(--display);
+letter-spacing:.22em;
+text-transform:uppercase;
+}
+.marquee i {
+color:var(--gold);
+font-style:normal;
+font-size:16px;
+}
+
+.section {padding:120px 0}
+.section-head {
+display:flex;
+justify-content:space-between;
+align-items:end;
+gap:30px;
+margin-bottom:55px;
+}
+.section-head h2 {
+font:500 clamp(42px,5vw,68px)/1.04 var(--serif);
+letter-spacing:-.05em;
+margin:17px 0 0;
+max-width:650px;
+}
+.section-head p {
+max-width:300px;
+color:#748075;
+font-size:12px;
+line-height:1.8;
+margin:0 0 4px;
+}
+.kicker {color:#8b987f}
+.sectors {background:var(--paper)}
+.sector-grid {
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:14px;
+}
+.sector {
+position:relative;
+height:380px;
+overflow:hidden;
+background:#d7d4c8;
+color:white;
+}
+.sector img {
+transition:transform .7s;
+filter:brightness(.78) saturate(.75);
+}
+.sector:hover img {transform:scale(1.06)}
+.sector:after {
+content:'';
+position:absolute;
+inset:35% 0 0;
+background:linear-gradient(transparent,rgba(13,33,25,.8));
+}
+.sector-info {
+position:absolute;
+z-index:1;
+bottom:24px;
+left:22px;
+right:18px;
+}
+.sector-info small {
+font-size:8px;
+letter-spacing:.18em;
+text-transform:uppercase;
+color:#e5d5b8;
+}
+.sector-info h3 {
+font:500 27px var(--serif);
+margin:8px 0;
+}
+.sector-info span {
+font-size:10px;
+color:#eee;
+opacity:.85;
+}
+.sector-index {
+position:absolute;
+z-index:1;
+top:20px;
+left:22px;
+font:500 11px var(--display);
+color:#fff;
+letter-spacing:.1em;
+}
+
+.intro-grid {
+display:grid;
+grid-template-columns:.85fr 1.15fr;
+gap:100px;
+align-items:start;
+}
+.intro-aside {position:sticky;top:30px}
+.intro-aside .big-number {
+font:500 100px/.9 var(--serif);
+color:var(--gold);
+margin:25px 0;
+}
+.intro-aside p {
+max-width:260px;
+color:#748075;
+font-size:12px;
+line-height:1.9;
+}
+.service-list {border-top:1px solid var(--line)}
+.service {
+display:grid;
+grid-template-columns:52px 1fr 36px;
+gap:20px;
+align-items:start;
+padding:28px 0;
+border-bottom:1px solid var(--line);
+}
+.service-no {
+font:500 12px var(--display);
+color:var(--gold);
+padding-top:7px;
+}
+.service h3 {
+font:500 27px var(--serif);
+margin:0 0 8px;
+}
+.service p {
+font-size:12px;
+color:#748075;
+line-height:1.8;
+margin:0;
+max-width:490px;
+}
+.service .arrow {
+font-size:20px;
+color:#8b987f;
+text-align:right;
+}
+
+.feature {
+background:var(--green);
+color:var(--cream);
+padding:110px 0;
+}
+.feature-grid {
+display:grid;
+grid-template-columns:1.1fr .9fr;
+gap:90px;
+align-items:center;
+}
+.feature h2 {
+font:500 clamp(44px,5vw,70px)/1.03 var(--serif);
+letter-spacing:-.05em;
+margin:22px 0;
+}
+.feature h2 em {color:#b9c4ad}
+.feature p {
+color:#c1cbbf;
+font-size:13px;
+line-height:1.9;
+max-width:470px;
+}
+.feature-points {
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px 30px;
+margin-top:40px;
+}
+.feature-point {
+border-top:1px solid #ffffff35;
+padding-top:15px;
+}
+.feature-point b {
+display:block;
+font:500 19px var(--serif);
+margin-bottom:7px;
+}
+.feature-point span {
+font-size:10px;
+line-height:1.7;
+color:#b8c4b8;
+}
+.feature-visual {
+height:530px;
+position:relative;
+}
+.feature-visual img {
+height:100%;
+filter:saturate(.65);
+}
+.feature-visual:before {
+content:'SW';
+position:absolute;
+z-index:1;
+top:-32px;
+left:-32px;
+width:90px;
+height:90px;
+display:grid;
+place-items:center;
+border:1px solid var(--gold);
+background:var(--green);
+color:var(--gold);
+font:500 24px var(--display);
+letter-spacing:-.1em;
+}
+
+.work {background:#e9e5d9}
+.work-grid {
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+.work-card {
+background:var(--paper);
+padding:14px;
+}
+.work-image {
+height:330px;
+position:relative;
+overflow:hidden;
+}
+.work-image img {
+transition:transform .7s;
+filter:saturate(.75);
+}
+.work-card:hover .work-image img {transform:scale(1.04)}
+.work-tag {
+position:absolute;
+top:16px;
+left:16px;
+background:var(--cream);
+padding:8px 11px;
+font-size:8px;
+letter-spacing:.15em;
+text-transform:uppercase;
+}
+.work-bottom {
+display:flex;
+justify-content:space-between;
+align-items:end;
+padding:22px 12px 12px;
+}
+.work-bottom small {
+color:#8a927f;
+font-size:8px;
+letter-spacing:.16em;
+text-transform:uppercase;
+}
+.work-bottom h3 {
+font:500 27px var(--serif);
+margin:6px 0 0;
+}
+.work-bottom p {
+font-size:10px;
+color:#748075;
+margin:0 0 4px;
+}
+.work-arrow {font-size:21px;color:var(--gold)}
+.work-disclaimer {
+font-size:10px;
+color:#777f72;
+margin-top:22px;
+}
+
+.pricing {background:var(--paper)}
+.price-grid {
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:14px;
+}
+.price-card {
+border:1px solid var(--line);
+padding:32px 28px;
+min-height:390px;
+display:flex;
+flex-direction:column;
+position:relative;
+}
+.price-card.featured {
+background:var(--green);
+color:var(--cream);
+border-color:var(--green);
+transform:translateY(-12px);
+}
+.price-label {
+font-size:9px;
+letter-spacing:.18em;
+text-transform:uppercase;
+color:#8d9a86;
+}
+.featured .price-label {color:var(--gold)}
+.price-card h3 {
+font:500 29px var(--serif);
+margin:17px 0 5px;
+}
+.price {
+font:500 48px var(--serif);
+margin:12px 0;
+}
+.price small {
+font:400 10px var(--sans);
+color:#8b9486;
+}
+.price-card>p {
+font-size:11px;
+color:#778174;
+line-height:1.7;
+min-height:40px;
+}
+.featured>p {color:#c3cbbf}
+.price-card ul {
+list-style:none;
+padding:18px 0 0;
+margin:0;
+border-top:1px solid var(--line);
+font-size:11px;
+color:#657166;
+line-height:2.5;
+}
+.featured ul {
+border-color:#ffffff35;
+color:#e1e5dc;
+}
+.price-card li:before {
+content:'＋';
+color:var(--gold);
+margin-right:9px;
+}
+.price-card .btn {
+margin-top:auto;
+align-self:flex-start;
+}
+.featured .btn {
+background:var(--cream);
+color:var(--green);
+border-color:var(--cream);
+}
+.price-note {
+font-size:10px;
+color:#7c8578;
+line-height:1.8;
+margin-top:25px;
+}
+
+.contact {
+padding:115px 0;
+background:#dfe2d6;
+}
+.contact-grid {
+display:grid;
+grid-template-columns:1fr .8fr;
+gap:80px;
+align-items:center;
+}
+.contact h2 {
+font:500 clamp(48px,6vw,82px)/.98 var(--serif);
+letter-spacing:-.06em;
+margin:20px 0;
+}
+.contact h2 em {color:#87957d}
+.contact p {
+font-size:13px;
+color:#667367;
+line-height:1.9;
+max-width:440px;
+}
+.contact-box {
+background:var(--green);
+color:var(--cream);
+padding:38px;
+}
+.contact-box .eyebrow {color:var(--gold)}
+.contact-box h3 {
+font:500 29px var(--serif);
+margin:18px 0;
+}
+.contact-box p {
+font-size:11px;
+color:#c4cec2;
+}
+.contact-row {
+border-top:1px solid #ffffff3a;
+padding:17px 0;
+display:flex;
+justify-content:space-between;
+font-size:11px;
+}
+.contact-row span:last-child {color:var(--gold)}
+.contact-box .btn {
+margin-top:15px;
+background:var(--gold);
+border-color:var(--gold);
+color:var(--green);
+}
+footer {
+background:var(--green);
+color:var(--cream);
+padding:40px 0 25px;
+}
+.footer-top {
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding-bottom:35px;
+border-bottom:1px solid #ffffff30;
+}
+.footer-brand {
+font:800 16px var(--display);
+letter-spacing:.2em;
+}
+.footer-brand small {
+display:block;
+font:400 8px var(--sans);
+letter-spacing:.2em;
+color:#b8c2b6;
+margin-top:6px;
+}
+.footer-links {
+display:flex;
+gap:25px;
+font-size:10px;
+color:#c4cec2;
+}
+.footer-bottom {
+display:flex;
+justify-content:space-between;
+padding-top:20px;
+color:#9eac9e;
+font-size:9px;
+letter-spacing:.08em;
+}
+
+@media(max-width:900px) {
+.wrap {width:min(100% - 40px,680px)}
+.navlinks {display:none}
+.menu {display:block}
+.hero {
+grid-template-columns:1fr;
+gap:40px;
+padding:55px 0;
+}
+.hero-visual {
+height:470px;
+margin-right:15px;
+}
+.hero-note {margin-top:42px}
+.section {padding:85px 0}
+.section-head {display:block;margin-bottom:38px}
+.section-head p {margin-top:20px}
+.sector-grid {grid-template-columns:1fr 1fr}
+.sector {height:310px}
+.intro-grid,.feature-grid,.contact-grid {
+grid-template-columns:1fr;
+gap:45px;
+}
+.intro-aside {position:static}
+.intro-aside .big-number {
+font-size:72px;
+margin:15px 0;
+}
+.feature {padding:80px 0}
+.feature-visual {
+height:390px;
+margin-left:20px;
+}
+.work-image {height:260px}
+.price-grid {grid-template-columns:1fr}
+.price-card.featured {transform:none}
+.price-card {min-height:0}
+.price-card .btn {margin-top:28px}
+.contact {padding:80px 0}
+}
+
+@media(max-width:560px) {
+.wrap {width:calc(100% - 36px)}
+.topline {font-size:8px}
+.nav {height:72px}
+.hero {padding-top:42px}
+h1 {font-size:58px}
+.hero-copy p {font-size:13px}
+.hero-actions {
+align-items:flex-start;
+flex-direction:column;
+gap:18px;
+}
+.hero-visual {
+height:380px;
+padding:0 0 25px 20px;
+}
+.floating-card {
+width:155px;
+padding:15px;
+}
+.floating-card .num {font-size:34px}
+.vertical-label {right:-17px}
+.hero-note {
+gap:12px;
+flex-wrap:wrap;
+font-size:8px;
+}
+.marquee-inner {
+justify-content:flex-start;
+min-width:900px;
+}
+.sector-grid {gap:9px}
+.sector {height:245px}
+.sector-info {left:13px;bottom:15px}
+.sector-info h3 {font-size:21px}
+.sector-index {left:13px;top:13px}
+.service {
+grid-template-columns:30px 1fr 20px;
+gap:10px;
+}
+.service h3 {font-size:23px}
+.feature-points {gap:18px}
+.feature-visual {height:300px}
+.work-grid {grid-template-columns:1fr}
+.work-image {height:260px}
+.work-bottom {padding:18px 8px 8px}
+.contact-box {padding:25px}
+.footer-top,.footer-bottom {
+align-items:flex-start;
+flex-direction:column;
+gap:22px;
+}
+.footer-links {flex-wrap:wrap;gap:15px}
+.section-head h2 {font-size:46px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="topline">
+Independent digital studio · Italia · Design with intention
+</div>
+
+<header class="wrap nav">
+<a class="brand" href="#home">
+<span class="monogram">SW</span>
+<span class="brandname">STUDIO WEB<small>DIGITAL DESIGN STUDIO</small></span>
+</a>
+
+<nav class="navlinks">
+<a href="#servizi">Servizi</a>
+<a href="#settori">Settori</a>
+<a href="#progetti">Progetti</a>
+<a href="#approccio">Approccio</a>
+<a href="#contatti">Contatti</a>
+</nav>
+
+<a class="nav-cta" href="#contatti">Parliamone <span>↗</span></a>
+<button class="menu" aria-label="Apri menu">☰</button>
+</header>
+
+<main>
+
+<section class="wrap hero" id="home">
+
+<div class="hero-copy">
+<div class="eyebrow">Web design per attività indipendenti</div>
+
+<h1>Il tuo mondo.<br><em>La tua</em> presenza.</h1>
+
+<p>
+Progettiamo esperienze digitali che fanno emergere ciò che rende speciale la tua attività. Siti web curati, riconoscibili e costruiti intorno alle persone che vuoi raggiungere.
+</p>
+
+<div class="hero-actions">
+<a class="btn" href="#contatti">Costruiamo qualcosa <span>↗</span></a>
+<a class="text-link" href="#progetti">Esplora i concept ↓</a>
+</div>
+
+<div class="hero-note">
+<span>Design su misura</span>
+<span>Mobile first</span>
+<span>Attenzione ai dettagli</span>
+</div>
+</div>
+
+<div class="hero-visual">
+<div class="hero-image">
+<img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1300&q=85" alt="Interno raffinato e luminoso, ispirazione per un design contemporaneo">
+<div class="image-caption">
+<span>01 / Digital experiences</span>
+<b>Made to be remembered.</b>
+</div>
+</div>
+
+<div class="floating-card">
+<div class="num">01—∞</div>
+<p>Un'identità digitale pensata per distinguerti, non per assomigliare a tutti.</p>
+</div>
+
+<div class="vertical-label">STUDIO WEB · EST. 2026</div>
+</div>
+
+</section>
+
+<div class="marquee">
+<div class="marquee-inner">
+<span>Strategia <i>✳</i></span>
+<span>Design <i>✳</i></span>
+<span>Esperienza <i>✳</i></span>
+<span>Identità <i>✳</i></span>
+<span>Presenza digitale <i>✳</i></span>
+<span>Strategia <i>✳</i></span>
+</div>
+</div>
+
+<section class="section sectors" id="settori">
+<div class="wrap">
+
+<div class="section-head">
+<div>
+<div class="eyebrow kicker">Per chi creiamo</div>
+<h2>Ogni attività ha<br>una storia da <em class="serif" style="color:#9aa58e">raccontare.</em></h2>
+</div>
+<p>
+Dai luoghi in cui si mangia bene agli spazi in cui ci si prende cura di sé: diamo forma online alle realtà che hanno qualcosa da offrire.
+</p>
+</div>
+
+<div class="sector-grid">
+
+<article class="sector">
+<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=85" alt="Ristorante elegante">
+<span class="sector-index">01 / FOOD</span>
+<div class="sector-info">
+<small>Food & dining</small>
+<h3>Ristoranti & café</h3>
+<span>Menu, atmosfera, prenotazioni</span>
+</div>
+</article>
+
+<article class="sector">
+<img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=85" alt="Barber shop">
+<span class="sector-index">02 / CARE</span>
+<div class="sector-info">
+<small>Personal care</small>
+<h3>Beauty & barber</h3>
+<span>Servizi, listini, appuntamenti</span>
+</div>
+</article>
+
+<article class="sector">
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=85" alt="Hotel e ospitalità">
+<span class="sector-index">03 / STAY</span>
+<div class="sector-info">
+<small>Hospitality</small>
+<h3>Hotel & B&B</h3>
+<span>Camere, esperienze, richieste</span>
+</div>
+</article>
+
+<article class="sector">
+<img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=85" alt="Studio e spazio professionale">
+<span class="sector-index">04 / MORE</span>
+<div class="sector-info">
+<small>Local business</small>
+<h3>Studi & attività</h3>
+<span>Professionisti, negozi, servizi</span>
+</div>
+</article>
+
+</div>
+</div>
+</section>
+
+<section class="section" id="servizi">
+<div class="wrap intro-grid">
+
+<div class="intro-aside">
+<div class="eyebrow kicker">Cosa possiamo fare</div>
+<div class="big-number">01—04</div>
+<h2 class="serif" style="font-size:37px;line-height:1.1;margin:0">
+Un sito bello<br>deve anche<br><em>lavorare bene.</em>
+</h2>
+<p>
+Progettiamo ogni elemento con un obiettivo: rendere semplice capire chi sei, cosa offri e come sceglierti.
+</p>
+</div>
+
+<div class="service-list">
+
+<div class="service">
+<div class="service-no">01</div>
+<div>
+<h3>Siti web su misura</h3>
+<p>Una casa digitale per la tua attività: design riconoscibile, contenuti ordinati e navigazione semplice da qualsiasi dispositivo.</p>
+</div>
+<div class="arrow">↗</div>
+</div>
+
+<div class="service">
+<div class="service-no">02</div>
+<div>
+<h3>Restyling & identità visiva</h3>
+<p>Rinnoviamo siti datati e costruiamo una direzione visiva coerente con il carattere, il pubblico e il posizionamento della tua attività.</p>
+</div>
+<div class="arrow">↗</div>
+</div>
+
+<div class="service">
+<div class="service-no">03</div>
+<div>
+<h3>Contenuti che orientano</h3>
+<p>Servizi, menu, listini, camere, gallery e informazioni pratiche: tutto ciò che serve al cliente, presentato con chiarezza.</p>
+</div>
+<div class="arrow">↗</div>
+</div>
+
+<div class="service">
+<div class="service-no">04</div>
+<div>
+<h3>Contatti & richieste</h3>
+<p>Collegamenti a WhatsApp, telefono, email, mappe e canali di prenotazione già utilizzati dalla tua attività.</p>
+</div>
+<div class="arrow">↗</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="feature" id="approccio">
+<div class="wrap feature-grid">
+
+<div>
+<div class="eyebrow" style="color:var(--gold)">Il nostro approccio</div>
+
+<h2>Non partiamo<br>da un template.<br><em>Partiamo da te.</em></h2>
+
+<p>
+Prima capiamo cosa rende unica la tua attività. Poi traduciamo quella personalità in una presenza digitale che abbia una direzione precisa, senza complicazioni inutili.
+</p>
+
+<div class="feature-points">
+
+<div class="feature-point">
+<b>Ascolto</b>
+<span>Capire la tua attività, le persone a cui ti rivolgi e ciò che vuoi comunicare.</span>
+</div>
+
+<div class="feature-point">
+<b>Direzione creativa</b>
+<span>Definire stile, struttura e contenuti prima di passare alla realizzazione.</span>
+</div>
+
+<div class="feature-point">
+<b>Cura dei dettagli</b>
+<span>Tipografia, immagini, spazi e navigazione: ogni scelta ha un motivo.</span>
+</div>
+
+<div class="feature-point">
+<b>Pronto per il mondo</b>
+<span>Un sito responsive, leggibile e facile da consultare anche da smartphone.</span>
+</div>
+
+</div>
+</div>
+
+<div class="feature-visual">
+<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1100&q=85" alt="Studio creativo luminoso con postazioni di lavoro">
+</div>
+
+</div>
+</section>
+
+<section class="section work" id="progetti">
+<div class="wrap">
+
+<div class="section-head">
+<div>
+<div class="eyebrow kicker">Direzioni creative</div>
+<h2>Immagina la tua<br>attività <em>qui.</em></h2>
+</div>
+<p>
+Una selezione di concept visivi che mostrano come possiamo interpretare settori e atmosfere differenti.
+</p>
+</div>
+
+<div class="work-grid">
+
+<article class="work-card">
+<div class="work-image">
+<img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1100&q=85" alt="Concept ristorante contemporaneo">
+<span class="work-tag">Concept 01 · Food</span>
+</div>
+<div class="work-bottom">
+<div>
+<small>Menu · Story · Prenotazioni</small>
+<h3>Osteria / Cucina contemporanea</h3>
+<p>Un'identità calda, essenziale, memorabile.</p>
+</div>
+<span class="work-arrow">↗</span>
+</div>
+</article>
+
+<article class="work-card">
+<div class="work-image">
+<img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1100&q=85" alt="Concept barber studio">
+<span class="work-tag">Concept 02 · Grooming</span>
+</div>
+<div class="work-bottom">
+<div>
+<small>Servizi · Listino · Contatti</small>
+<h3>Barber / Studio indipendente</h3>
+<p>Carattere deciso e dettagli curati.</p>
+</div>
+<span class="work-arrow">↗</span>
+</div>
+</article>
+
+<article class="work-card">
+<div class="work-image">
+<img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1100&q=85" alt="Concept beauty atelier">
+<span class="work-tag">Concept 03 · Beauty</span>
+</div>
+<div class="work-bottom">
+<div>
+<small>Trattamenti · Gallery · Richieste</small>
+<h3>Beauty / Atelier</h3>
+<p>Un'esperienza delicata e contemporanea.</p>
+</div>
+<span class="work-arrow">↗</span>
+</div>
+</article>
+
+<article class="work-card">
+<div class="work-image">
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1100&q=85" alt="Concept hospitality boutique stay">
+<span class="work-tag">Concept 04 · Hospitality</span>
+</div>
+<div class="work-bottom">
+<div>
+<small>Camere · Gallery · Contatti</small>
+<h3>Boutique stay / B&B</h3>
+<p>Atmosfera e dettagli al centro.</p>
+</div>
+<span class="work-arrow">↗</span>
+</div>
+</article>
+
+</div>
+
+<p class="work-disclaimer">
+I progetti mostrati sono concept dimostrativi, creati per illustrare possibili direzioni creative. Non rappresentano lavori commissionati da clienti.
+</p>
+
+</div>
+</section>
+
+<section class="section pricing" id="soluzioni">
+<div class="wrap">
+
+<div class="section-head">
+<div>
+<div class="eyebrow kicker">Collaboriamo</div>
+<h2>Una soluzione<br>per ogni <em>inizio.</em></h2>
+</div>
+<p>
+Ogni progetto è diverso. Queste formule sono un punto di partenza: struttura e investimento si definiscono insieme.
+</p>
+</div>
+
+<div class="price-grid">
+
+<article class="price-card">
+<div class="price-label">01 / Essential</div>
+<h3>Starter</h3>
+<div class="price">€79 <small>/ da</small></div>
+<p>Per presentare la tua attività con chiarezza.</p>
+<ul>
+<li>Pagina web singola</li>
+<li>Presentazione e servizi</li>
+<li>Contatti e WhatsApp</li>
+<li>Ottimizzazione smartphone</li>
+</ul>
+<a class="btn" href="#contatti">Richiedi informazioni ↗</a>
+</article>
+
+<article class="price-card featured">
+<div class="price-label">02 / Signature · Più richiesto</div>
+<h3>Professional</h3>
+<div class="price">€129 <small>/ da</small></div>
+<p>Più spazio per raccontare ciò che ti rende diverso.</p>
+<ul>
+<li>Fino a 4 sezioni</li>
+<li>Servizi, menu o listino</li>
+<li>Galleria immagini</li>
+<li>Contatti e collegamenti</li>
+<li>Design responsive</li>
+</ul>
+<a class="btn" href="#contatti">Parliamone ↗</a>
+</article>
+
+<article class="price-card">
+<div class="price-label">03 / Bespoke</div>
+<h3>Premium</h3>
+<div class="price">€199 <small>/ da</small></div>
+<p>Un progetto più completo, costruito intorno alla tua identità.</p>
+<ul>
+<li>Struttura personalizzata</li>
+<li>Fino a 6 sezioni</li>
+<li>Galleria e contenuti dedicati</li>
+<li>Modulo o canali di contatto</li>
+<li>Design responsive</li>
+</ul>
+<a class="btn" href="#contatti">Richiedi informazioni ↗</a>
+</article>
+
+</div>
+
+<p class="price-note">
+Prezzi di lancio indicativi. Dominio, hosting a pagamento, servizi esterni, sistemi di prenotazione e manutenzione non sono inclusi e vengono valutati separatamente. Ogni preventivo viene confermato prima dell'inizio del lavoro.
+</p>
+
+</div>
+</section>
+
+<section class="contact" id="contatti">
+<div class="wrap contact-grid">
+
+<div>
+<div class="eyebrow kicker">Il prossimo passo</div>
+<h2>Facciamo<br>parlare di te<br><em>nel modo giusto.</em></h2>
+<p>
+Hai un ristorante, uno studio, un negozio o un'idea da portare online? Raccontaci cosa immagini. Il primo confronto serve a capire se e come possiamo aiutarti.
+</p>
+<a class="text-link" href="mailto:studioweb.digitalservice@gmail.com">Scrivici una mail ↗</a>
+</div>
+
+<div class="contact-box">
+<div class="eyebrow">STUDIO WEB · Let’s create</div>
+<h3>La tua prossima<br>buona idea inizia qui.</h3>
+<p>Un progetto alla volta. Con cura, ascolto e una direzione chiara.</p>
+
+<div class="contact-row">
+<span>Progetti</span>
+<span>Italia · Online</span>
+</div>
+
+<div class="contact-row">
+<span>Settori</span>
+<span>Local businesses</span>
+</div>
+
+<div class="contact-row">
+<span>Disponibilità</span>
+<span>Su richiesta</span>
+</div>
+
+<a class="btn" href="mailto:studioweb.digitalservice@gmail.com">Inizia una conversazione ↗</a>
+</div>
+
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="wrap">
+
+<div class="footer-top">
+<div class="footer-brand">
+STUDIO WEB
+<small>DIGITAL DESIGN STUDIO · DESIGN WITH INTENTION</small>
+</div>
+
+<div class="footer-links">
+<a href="#servizi">Servizi</a>
+<a href="#settori">Settori</a>
+<a href="#progetti">Progetti</a>
+<a href="#contatti">Contatti</a>
+</div>
+</div>
+
+<div class="footer-bottom">
+<span>© 2026 STUDIO WEB · Tutti i diritti riservati</span>
+<span>Made with intention. ↗</span>
+</div>
+
+</div>
+</footer>
+
+<script>
+const menu = document.querySelector('.menu');
+
+menu?.addEventListener('click', () => {
+const nav = document.querySelector('.navlinks');
+nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+nav.style.position = 'absolute';
+nav.style.top = '72px';
+nav.style.left = '0';
+nav.style.right = '0';
+nav.style.padding = '22px';
+nav.style.background = 'var(--cream)';
+nav.style.flexDirection = 'column';
+nav.style.alignItems = 'flex-start';
+nav.style.zIndex = '10';
+});
+</script>
+
+</body>
+</html>
